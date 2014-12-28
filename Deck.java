@@ -17,7 +17,10 @@ public class Deck {
 	}
 	
 	public int getDeckTotal(){
-		return sunBeatsDown + stormPicksUp + stormMoves;
+		int a = this.getSunBeatsDown();
+		int b = this.getStormPicksUp();
+		int c = this.getStormMoves();
+		return a + b + c;
 	}
 	
 	public double calculateOddsSunBeatsDown(int sunBeatsDownLeft, int cardsLeft) {

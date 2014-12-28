@@ -37,11 +37,15 @@ public class UserInterface {
 	}
 	
 	public void printOdds(Deck d){
-		System.out.println("Odds of Survival:");
-		System.out.println("Odds of drawing Sun Beats Down: " + d.calculateOddsSunBeatsDown(d.getSunBeatsDown(), d.getDeckTotal()));
-		System.out.println("Number of Sun Beats Down Left: " + d.getSunBeatsDown());
-		System.out.println("Odds of drawing Storm Picks Up: " + d.calculateOddsStormPicksUp(d.getStormPicksUp(), d.getDeckTotal()));
-		System.out.println("Number of Storm Picks Up Left: " + d.getStormPicksUp());
+		System.out.println("\nOdds of Survival:");
+		System.out.println("========================================");
+		
+		System.out.println("     Odds of drawing Sun Beats Down: " + (int)d.calculateOddsSunBeatsDown(d.getSunBeatsDown(), d.getDeckTotal()) + "%");
+		System.out.println("      Number of Sun Beats Down Left: " + d.getSunBeatsDown());
+		System.out.println("     Odds of drawing Storm Picks Up: " + (int)d.calculateOddsStormPicksUp(d.getStormPicksUp(), d.getDeckTotal()) + "%");
+		System.out.println("      Number of Storm Picks Up Left: " + d.getStormPicksUp());
 		System.out.println("Number of Storm Movement Cards Left: " + d.getStormMoves());
+		System.out.println("         Total number of cards left: " + d.getDeckTotal());
+		System.out.println("\n");
 	}
 }
