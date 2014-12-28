@@ -12,7 +12,8 @@ public class UserInterface {
 			System.out.println("1) Sun Beats Down Card");
 			System.out.println("2) Storm Picks Up Card");
 			System.out.println("3) Storm Movement Card");
-			System.out.println("4) Exit");
+			System.out.println("4) Reset Deck");
+			System.out.println("5) Exit");
 			result = in.nextInt();
 			switch (result) {
 			case 1: 
@@ -30,8 +31,12 @@ public class UserInterface {
 				printOdds(d);
 				break;
 			case 4:
+				this.resetProgram();
+				break;
+			case 5:
 				done = true;
 				break;
+			
 			}
 		}
 	}
@@ -47,5 +52,10 @@ public class UserInterface {
 		System.out.println("Number of Storm Movement Cards Left: " + d.getStormMoves());
 		System.out.println("         Total number of cards left: " + d.getDeckTotal());
 		System.out.println("\n");
+	}
+
+	public void resetProgram(){
+		Deck e = new Deck();
+		this.mainMenu(e);
 	}
 }
